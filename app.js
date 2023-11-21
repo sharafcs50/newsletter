@@ -54,7 +54,7 @@ app.post("/", function (req, res) {
 		});
 	});
 
-	// request.write(jsonData);
+	request.write(jsonData);
 	request.end();
 });
 
@@ -81,3 +81,6 @@ app.listen(process.env.PORT || 4000, () => {
 // UNIQUE AUDIENCE ID FOR SITESOL
 
 // 6100bcca31
+
+// Deployed live at : cyclic.sh
+// link: https://sleepy-ox-sunbonnet.cyclic.app/
