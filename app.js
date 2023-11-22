@@ -1,8 +1,12 @@
+require("dotenv").config();
 const bodyParser = require("body-parser");
 var express = require("express");
 var app = express();
 const https = require("https");
 
+const myAPI = process.env.API_KEY;
+console.log(myAPI);
+// console.log(myAPI);
 // for server to pull static files like styles.css etc. Enter name of static folder.
 // create a public folder and add them there.
 app.use(express.static("public"));
@@ -40,7 +44,7 @@ app.post("/", function (req, res) {
 
 	const options = {
 		method: "POST",
-		auth: "sharaf:03eaddf10496c73e888cb30b887ef398-us13",
+		auth: `sharaf:${myAPI}`,
 	};
 
 	const request = https.request(url, options, function (response) {
@@ -65,22 +69,6 @@ app.post("/faliure", function (req, res) {
 app.listen(process.env.PORT || 4000, () => {
 	console.log("SHARAF SERVER running on port 4000");
 });
-
-// {
-//     "email_address": "$user_email",
-//     "status": "subscribed",
-//     "merge_fields": {
-//       "FNAME": "$user_fname",
-//       "LNAME": "$user_lname"
-//     }
-//   }
-
-// API KEY (MAILCHIMP)
-// 03eaddf10496c73e888cb30b887ef398-us13
-
-// UNIQUE AUDIENCE ID FOR SITESOL
-
-// 6100bcca31
 
 // Deployed live at : cyclic.sh
 // link: https://sleepy-ox-sunbonnet.cyclic.app/
