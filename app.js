@@ -5,7 +5,7 @@ var app = express();
 const https = require("https");
 
 const myAPI = process.env.API_KEY;
-console.log(myAPI);
+
 // console.log(myAPI);
 // for server to pull static files like styles.css etc. Enter name of static folder.
 // create a public folder and add them there.
@@ -69,6 +69,3 @@ app.post("/faliure", function (req, res) {
 app.listen(process.env.PORT || 4000, () => {
 	console.log("SHARAF SERVER running on port 4000");
 });
-
-// Deployed live at : cyclic.sh
-// link: https://sleepy-ox-sunbonnet.cyclic.app/
