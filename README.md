@@ -1,7 +1,7 @@
 # Newsletter Subscription
 
 ## Try it out
-You can try out the project [here](https://sleepy-ox-sunbonnet.cyclic.app/).
+You can try out the project [here](https://newsletter-production-53cd.up.railway.app/).
 
 ## Overview
 I made this project to be able to add a newsletter feature to a website. This was a learning project to test how to use external APIs (Mailchimp API in this case).
